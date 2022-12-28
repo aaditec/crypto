@@ -1,17 +1,16 @@
-package com.nitv.cryptoapp.base
+package com.nitv.cryptoapp.repository
 
 import com.nitv.cryptoapp.R
-import com.nitv.cryptoapp.MyApplication.Companion.getAppContext
-import com.nitv.cryptoapp.model.errorResponse.ErrorResponse
+import com.nitv.cryptoapp.model.Response.ErrorResponse
 import com.nitv.cryptoapp.utils.NetworkResult
 import com.google.gson.Gson
+import com.nitv.cryptoapp.MyApplication.Companion.getAppContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 
-abstract class BaseRepository {
-
-    suspend fun <T> safeApiRequest(
+abstract class Repository {
+    suspend fun <T> apiRequest(
         apiRequest: suspend () -> T
     ): NetworkResult<T> {
         return withContext(Dispatchers.IO) {

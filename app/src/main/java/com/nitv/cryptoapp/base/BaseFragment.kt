@@ -31,7 +31,6 @@ abstract class BaseFragment<VB : ViewBinding, VM : ViewModel>(
         if (_binding == null) {
             throw IllegalArgumentException("Binding null")
         }
-
         return binding.root
     }
 

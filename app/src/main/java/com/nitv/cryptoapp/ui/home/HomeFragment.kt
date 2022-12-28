@@ -27,7 +27,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
     }
 
 
-
     override fun observeEvents() {
         with(viewModel) {
             cryptoResponse.observe(viewLifecycleOwner, Observer {
@@ -49,8 +48,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
         val mAdapter = HomeRecyclerAdapter(object : ItemClickListener {
             override fun onItemClick(coin: Data) {
                 if (coin.symbol != null) {
-                    val navigation =
-                        HomeFragmentDirections.actionHomeFragmentToDetailFragment(coin.symbol)
+                    val navigation = HomeFragmentDirections.actionHomeFragmentToDetailFragment(coin.symbol)
                     Navigation.findNavController(requireView()).navigate(navigation)
                 }
             }

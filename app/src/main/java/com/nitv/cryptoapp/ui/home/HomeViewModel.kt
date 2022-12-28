@@ -3,7 +3,7 @@ package com.nitv.cryptoapp.ui.home
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nitv.cryptoapp.model.home.CryptoResponse
+import com.nitv.cryptoapp.model.Response.CryptoResponse
 import com.nitv.cryptoapp.utils.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

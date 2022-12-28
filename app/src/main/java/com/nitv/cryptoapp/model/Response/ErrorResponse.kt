@@ -1,4 +1,4 @@
-package com.nitv.cryptoapp.model.errorResponse
+package com.nitv.cryptoapp.model.Response
 
 
 import com.google.gson.annotations.SerializedName

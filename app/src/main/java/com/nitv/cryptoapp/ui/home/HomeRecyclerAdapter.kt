@@ -1,5 +1,6 @@
 package com.nitv.cryptoapp.ui.home
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +10,6 @@ import com.nitv.cryptoapp.model.home.Data
 
 class HomeRecyclerAdapter(private val listener: ItemClickListener) :
     RecyclerView.Adapter<HomeRecyclerAdapter.MViewHolder>() {
-
     private var coins = emptyList<Data>()
 
     class MViewHolder(private val binding: RecyclerRowLayoutBinding) :
@@ -38,8 +38,8 @@ class HomeRecyclerAdapter(private val listener: ItemClickListener) :
 
     override fun getItemCount() = coins.size
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setList(newList: List<Data>) {
         coins = newList
-        notifyDataSetChanged()
     }
 }

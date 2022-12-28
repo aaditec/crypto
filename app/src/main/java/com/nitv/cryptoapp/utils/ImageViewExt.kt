@@ -7,8 +7,8 @@ import coil.load
 
 
 fun ImageView.loadImage(url: String?) {
-    val placeholder = createPlaceHolder(this.context)
-    this.load(url) {
+    val placeholder = createPlaceHolder(context)
+    load(url) {
         crossfade(true)
         crossfade(500)
         placeholder(placeholder)
